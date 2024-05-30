@@ -1,16 +1,17 @@
 <template>
   <div>
-    <img src="../assets/bglogin.68ca2f48.jpg">
+    <h1>1111</h1>
+    <img src="../assets/bglogin.68ca2f48.jpg" />
   </div>
 </template>
 
 <script>
 export default {
-  name: 'HelloWorld',
+  name: "HelloWorld",
   props: {
-    msg: String
-  }
-}
+    msg: String,
+  },
+};
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
