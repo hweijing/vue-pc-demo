@@ -7,7 +7,7 @@
             </BreadcrumbItem>
             <BreadcrumbItem>
                 <Icon type="logo-buffer"></Icon>
-                客经管理
+                寝室管理员
             </BreadcrumbItem>
             <BreadcrumbItem>
                 <Icon type="ios-cafe"></Icon>

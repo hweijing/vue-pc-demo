@@ -2,16 +2,15 @@
     <div class="layout">
         <Layout>
             <Sider class="sider">
-                <img class="logo" src="../assets/abt.png">
+                <img class="logo" src="">
                 <Menu accordion width="200px" theme="dark">
                     <Submenu name="1">
                         <template slot="title">
                             <Icon type="ios-analytics" />
-                            拓客素材管理
+                            寝室管理员
                         </template>
-                        <MenuItem name="1-1">文章管理</MenuItem>
-                        <MenuItem name="1-2">评论管理</MenuItem>
-                        <MenuItem name="1-3">举报管理</MenuItem>
+                        <MenuItem name="1-1">学生信息</MenuItem>
+                        <MenuItem name="1-2">寝室信息</MenuItem>
                     </Submenu>
                 </Menu>
             </Sider>
@@ -23,23 +22,23 @@
                             <Breadcrumb>
                                 <BreadcrumbItem>
                                     <Icon type="ios-home-outline"></Icon>
-                                    首页
+                                    登录
                                 </BreadcrumbItem>
                                 <BreadcrumbItem>
                                     <Icon type="logo-buffer"></Icon>
-                                    客经管理
+                                    寝室管理员
                                 </BreadcrumbItem>
                                 <BreadcrumbItem>
                                     <Icon type="ios-cafe"></Icon>
-                                    展业海报
+                                    寝室管理
                                 </BreadcrumbItem>
                             </Breadcrumb>
                         </div>
                         <div class="flex">
                             <Breadcrumb style="margin-right: 10px;">
-                                <BreadcrumbItem>河南总公司</BreadcrumbItem>
-                                <BreadcrumbItem>测试测试</BreadcrumbItem>
-                                <BreadcrumbItem>CESH001</BreadcrumbItem>
+                                <BreadcrumbItem>某某高校</BreadcrumbItem>
+                                <BreadcrumbItem>9栋</BreadcrumbItem>
+                                <BreadcrumbItem>11号楼</BreadcrumbItem>
                             </Breadcrumb>
                             <Icon type="md-expand" size="32" style="margin-right: 10px;"></Icon>
                             <Icon type="md-notifications" size="32" style="margin-right: 10px;"></Icon>
@@ -49,68 +48,68 @@
                 </Header>
                 <Content>
                     <div class="tag-container">
-                        <Tag type="dot" closable color="default">首页</Tag>
-                        <Tag type="dot" closable color="primary">展业海报</Tag>
+                        <Tag type="dot" closable color="default">寝室管理</Tag>
+                        <Tag type="dot" closable color="primary">寝室详情</Tag>
                     </div>
                     <Card dis-hover class="card">
                         <div slot="title" class="flex" style="justify-content: space-between;">
                             <div class="flex">
-                                <Select style="width:200px;margin-right: 20px;" placeholder="请选择海报分类">
+                                <Select style="width:200px;margin-right: 20px;" placeholder="请选择单元楼">
                                     <Option value="节日" label="节日">
-                                        <span>节日</span>
+                                        <span>1栋</span>
                                     </Option>
                                     <Option value="正能量" label="正能量">
-                                        <span>正能量</span>
+                                        <span>2栋</span>
                                     </Option>
                                     <Option value="理念" label="理念">
-                                        <span>理念</span>
+                                        <span>3栋</span>
                                     </Option>
                                     <Option value="抗疫" label="抗疫">
-                                        <span>抗疫</span>
+                                        <span>4栋</span>
                                     </Option>
                                 </Select>
                                 <Button type="primary" icon="ios-search">搜索</Button>
                             </div>
                             <div class="flex">
-                                <Button type="success" @click="modal = true">海报上传</Button>
+                                <Button type="success" @click="modal = true">寝室详情</Button>
                                 <Modal v-model="modal" :fullscreen="isFullScreen" width="1200" :mask-closable="false"
                                     :closable="false">
                                     <div slot="header">
-                                        <p>海报上传</p>
+                                        <p>寝室详情</p>
                                     </div>
                                     <Form :model="uploadModal" :label-width="140" class="flex"
                                         style="align-items: baseline;">
                                         <div style="flex:1">
-                                            <FormItem label="分类：" required>
+                                            <FormItem label="楼号：" required>
                                                 <Select style="width: 400px" v-model="uploadModal.select"
-                                                    placeholder="请选择分类" clearable filterable>
+                                                    placeholder="请选择楼号" clearable filterable>
                                                     <Option value="beijing">New York</Option>
                                                     <Option value="shanghai">London</Option>
                                                     <Option value="shenzhen">Sydney</Option>
                                                 </Select>
                                             </FormItem>
-                                            <FormItem label="发布时间：" required>
+                                            <FormItem label="单元号：" required>
                                                 <DatePicker style="width: 400px" v-model="uploadModal.date"
-                                                    type="datetime" placeholder="请选择时间">
+                                                    type="datetime" placeholder="请选择单元号">
                                                 </DatePicker>
                                             </FormItem>
                                         </div>
                                         <div style="flex:1" class="flex">
                                             <div style="flex:1">
-                                                <FormItem label="上传图片：" required>
+                                                <FormItem label="上传寝室照片：" required>
                                                     <Upload action="">
                                                         <Button icon="ios-camera"></Button>
                                                     </Upload>
                                                     <div class="picture-border"></div>
                                                 </FormItem>
 
-                                                <FormItem label="名字颜色：" required>
+                                                <FormItem label="是否可分配：" required>
                                                     <ColorPicker v-model="uploadModal.nameColor" />
                                                 </FormItem>
 
-                                                <FormItem label="电话颜色：" required>
+                                                <!-- <FormItem label="电话颜色：" required>
                                                     <ColorPicker v-model="uploadModal.phoneColor" />
-                                                </FormItem>
+                                                </FormItem> -->
                                                 <FormItem>
                                                     <p style="color:cornflowerblue; cursor:pointer"
                                                         @click="onSeniorSet">

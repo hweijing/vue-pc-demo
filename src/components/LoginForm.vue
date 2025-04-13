@@ -2,8 +2,8 @@
     <div class="layer">
         <div class="loginForm">
             <div class="header">
-                <img src="../assets/abt.png">
-                <p>保险核心业务后台管理系统</p>
+                <img src="../assets/dormitory_logo_transparent.png">
+                <p>高校寝室管理系统</p>
             </div>
             <div class="content">
                 <Form ref="form" :model="form" :rules="rules">
